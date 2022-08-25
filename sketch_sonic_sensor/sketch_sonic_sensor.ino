@@ -32,7 +32,7 @@ void loop() {
   duration = pulseIn(echoPin, HIGH);
   
   // Calculating the distance
-  distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (go and back)
+  distance = duration * 0.034 / 2; //  Speed of sound wave divided by 2 (go and back)
 
   if ( duration > 1000)
   {
