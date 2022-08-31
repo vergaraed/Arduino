@@ -1,7 +1,7 @@
 #include <WiFi.h>
 
 #define MAX_WIFI_NETWORKS 5
-#define WIFI_TIMEOUT_MS   20000
+#define WIFI_TIMEOUT_MS   2000
 void setup() {
   Serial.begin(115200);
 
@@ -152,15 +152,15 @@ void PrintMac()
 {
   WiFi.macAddress(mac);
   Serial.print("MAC: ");
-  Serial.print(mac[5],HEX);
-  Serial.print(":");
-  Serial.print(mac[4],HEX);
-  Serial.print(":");
-  Serial.print(mac[3],HEX);
-  Serial.print(":");
-  Serial.print(mac[2],HEX);
+  Serial.print(mac[0],HEX);
   Serial.print(":");
   Serial.print(mac[1],HEX);
   Serial.print(":");
-  Serial.println(mac[0],HEX);
+  Serial.print(mac[2],HEX);
+  Serial.print(":");
+  Serial.print(mac[3],HEX);
+  Serial.print(":");
+  Serial.print(mac[4],HEX);
+  Serial.print(":");
+  Serial.println(mac[5],HEX);
 }
